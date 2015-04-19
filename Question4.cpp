@@ -18,6 +18,7 @@ using namespace std;
 
 class Animal
 {
+public:
 	Animal() {};
 	~Animal() {};
 
@@ -25,3 +26,42 @@ class Animal
 	virtual void does() = 0;
 };
 
+class Bird : public Animal
+{
+public:
+	Bird() {};
+	~Bird() {};
+
+	virtual void name();
+	virtual void does();
+};
+
+class Dog : public Animal
+{
+public: 
+	Dog() {};
+	~Dog() {};
+
+	virtual void name();
+	virtual void does();
+};
+
+void Bird::name()
+{
+	cout << "Bird";
+}
+
+void Bird::does()
+{
+	cout << "chirps";
+}
+
+void Dog::name()
+{
+	cout << "Dog";
+}
+
+void Dog::does()
+{
+	cout << "barks";
+}
