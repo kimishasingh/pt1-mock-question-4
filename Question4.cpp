@@ -65,3 +65,27 @@ void Dog::does()
 {
 	cout << "barks";
 }
+
+int main()
+{
+	Animal *ptrAnimal[2];
+
+	ptrAnimal[0] = new Bird();
+	ptrAnimal[1] = new Dog();
+
+	cout << "A ";
+	ptrAnimal[0]->name();
+	cout << " ";
+	ptrAnimal[0]->does();
+	cout << endl;
+
+	cout << "A ";
+	ptrAnimal[1]->name();
+	cout << " ";
+	ptrAnimal[1]->does();
+	cout << endl;
+
+	delete *ptrAnimal;
+	system("pause");
+	return 0;
+}
